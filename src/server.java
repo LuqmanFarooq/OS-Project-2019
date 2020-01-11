@@ -229,10 +229,9 @@ class Connecthandler extends Thread {
 									if (p.getPlayerPosition().equalsIgnoreCase(chkPlayerPos)) {
 
 										sendMessage(p.toString());
+										
 									} // if
-									else {
-										sendMessage("Player not found!!!!!");
-									} // else
+									
 								} // for
 
 							} // inner else s
@@ -327,9 +326,10 @@ class Connecthandler extends Thread {
 										playerStatus, playerPosition);
 								// adding object to arraylist
 								players.add(p);
+								sendMessage(String.valueOf(players.size()));
 								// printing playes to server console
 								for (Player u : players) {
-									System.out.println(u);
+									sendMessage(u.toString());
 								} // for
 
 							} // add player inner if

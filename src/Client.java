@@ -240,8 +240,13 @@ public class Client
 						sendMessage(message);
 						
 						// printing players
-						//message = (String)in.readObject();
-						//System.out.println(message);
+						message = (String) in.readObject();
+						int PlayersSize = Integer.valueOf(message);
+
+						for (int i = 0; i < PlayersSize; i++) {
+							message = (String) in.readObject();
+							System.out.println(message);
+						}
 						
 					}//if add player
 					else if(message.equals("2"))
