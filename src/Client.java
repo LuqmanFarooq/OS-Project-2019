@@ -19,12 +19,15 @@ public class Client
 	{
 		console = new Scanner(System.in);
 		
-		System.out.println("Enter the IP Address of the server");
-		ipaddress = console.nextLine();
-		
-		System.out.println("Enter the TCP Port");
-		portaddress  = console.nextInt();
-		
+		//System.out.println("Enter the IP Address of the server");
+		//ipaddress = console.nextLine();
+		// my azure server ipaddress
+		//ipaddress="51.140.95.93";
+		ipaddress="127.0.0.1";
+		//System.out.println("Enter the TCP Port");
+		//portaddress  = console.nextInt();
+		// azure server ip address
+		portaddress=10000;
 	}
 	
 	void sendMessage(String msg)
@@ -124,6 +127,10 @@ public class Client
 						sendMessage(message);
 						
 					}//inner if
+					else {
+					message = (String)in.readObject();
+					System.out.println(message);
+					}//inner else
 				}// outer if
 			
 				else if(message.equals("2"))
@@ -151,7 +158,25 @@ public class Client
 					// welcome message
 					message = (String)in.readObject();
 					System.out.println(message);
-					}// inner if club login
+					
+					// club logged in user options
+					message = (String)in.readObject();
+					System.out.println(message);
+					message = console.next();
+					sendMessage(message);
+					if(message.equals("1"))
+					{
+					// position to search for options
+					message = (String)in.readObject();
+					System.out.println(message);
+					message = console.next();
+					sendMessage(message);
+					
+					// prints searched players or error message
+					message = (String)in.readObject();
+					System.out.println(message);
+					}// search at given position
+				}// inner if club login
 					
 					else if(message.equals("2"))
 					{
@@ -215,8 +240,9 @@ public class Client
 						sendMessage(message);
 						
 						// printing players
-						message = (String)in.readObject();
-						System.out.println(message);
+						//message = (String)in.readObject();
+						//System.out.println(message);
+						
 					}//if add player
 					else if(message.equals("2"))
 					{
@@ -265,7 +291,7 @@ public class Client
 					}// inner if Agent login
 					
 				}// outer else if
-			
+				
 				message = (String)in.readObject();
 				System.out.println(message);
 				message = console.next();

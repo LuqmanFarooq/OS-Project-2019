@@ -1,6 +1,6 @@
-import java.util.UUID;
 
-public class Player extends server{
+
+public class Player extends server {
 	
 	// variables
 	String pName;
@@ -26,6 +26,7 @@ public class Player extends server{
 		this.playerPosition = playerPosition;
 	}
 
+	// getter and setter methods
 	int getPlayerValuation() {
 		return playerValuation;
 	}
@@ -66,7 +67,7 @@ public class Player extends server{
 	String getPlayerPosition() {
 		return playerPosition;
 	}
-	
+	// to string method
 	@Override
 	public String toString() {
 		return "Player [player Name=" + pName + ", player Age=" + playerAge + ", player Id=" + playerId + ", club Id=" + clubId

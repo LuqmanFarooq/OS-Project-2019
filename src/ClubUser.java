@@ -1,10 +1,13 @@
 
 public class ClubUser extends server{
+	
+	// variables
 	int clubId;
 	String clubName;
 	String clubEmail;
 	int fundsAvailTransfer;
 	
+	// constructor
 	public ClubUser(int clubId, String clubName, String clubEmail, int fundsAvailTransfer) {
 		super();
 		this.clubId = clubId;
@@ -13,29 +16,17 @@ public class ClubUser extends server{
 		this.fundsAvailTransfer = fundsAvailTransfer;
 	}
 
+	// getter and setter methods
 	int getClubId() {
 		return clubId;
 	}
 
-	private void setClubId(int clubId) {
-		this.clubId = clubId;
-	}
+	
 
 	String getClubName() {
 		return clubName;
 	}
 
-	private void setClubName(String clubName) {
-		this.clubName = clubName;
-	}
-
-	private String getClubEmail() {
-		return clubEmail;
-	}
-
-	private void setClubEmail(String clubEmail) {
-		this.clubEmail = clubEmail;
-	}
 
 	private int getFundsAvailTransfer() {
 		return fundsAvailTransfer;
@@ -45,6 +36,7 @@ public class ClubUser extends server{
 		this.fundsAvailTransfer = fundsAvailTransfer;
 	}
 
+	// to string method
 	@Override
 	public String toString() {
 		return "ClubUser clubId=" + clubId + ", clubName=" + clubName + ", clubEmail=" + clubEmail

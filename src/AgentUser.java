@@ -1,10 +1,11 @@
 import java.util.*;
 
-public class AgentUser extends server{
+public class AgentUser extends server {
 	String agentName;
 	int agentId;
 	String agentEmail;
-	
+
+	// constructor
 	public AgentUser(String agentName, int agentId, String agentEmail) {
 		super();
 		this.agentName = agentName;
@@ -12,36 +13,19 @@ public class AgentUser extends server{
 		this.agentEmail = agentEmail;
 	}
 
+	// getter methods
 	String getAgentName() {
 		return agentName;
 	}
 
-	private void setAgentName(String agentName) {
-		this.agentName = agentName;
-	}
-
-	 int getAgentId() {
+	int getAgentId() {
 		return agentId;
 	}
 
-	private void setAgentId(int agentId) {
-		this.agentId = agentId;
-	}
-
-	private String getAgentEmail() {
-		return agentEmail;
-	}
-
-	private void setAgentEmail(String agentEmail) {
-		this.agentEmail = agentEmail;
-	}
-
+	// to string method
 	@Override
 	public String toString() {
 		return "AgentUser agentName=" + agentName + ", agentId=" + agentId + ", agentEmail=" + agentEmail;
 	}
-	
-	
-	
-}
 
+}
